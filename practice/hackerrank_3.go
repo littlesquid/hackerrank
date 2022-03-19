@@ -3,7 +3,7 @@ package practice
 func CompareTriplets(a string, b string) []int32 {
 	var result []int32 = make([]int32, 2)
 
-	calculatePoint(convertToIntArray(a), convertToIntArray(b), 0, result)
+	calculatePoint(ConvertToIntArray(a), ConvertToIntArray(b), 0, result)
 
 	return result
 }

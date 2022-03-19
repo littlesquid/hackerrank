@@ -13,7 +13,7 @@ func simpleArraySum(arr []int32) int32 {
 }
 
 func SimpleArraySumMain(input string) int32 {
-	inputArr := convertToIntArray(input)
+	inputArr := ConvertToIntArray(input)
 	result := simpleArraySum(inputArr)
 	fmt.Printf("summary of [%v] is %v\n", input, result)
 	return result

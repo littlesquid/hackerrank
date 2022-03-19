@@ -7,7 +7,9 @@ import (
 
 func main() {
 	var practiceNo int8
-	fmt.Print("1. SolveMeFirst\n2. SimpleArraySum\n3. CompareTriplets\nEnter practice number: ")
+	fmt.Print("1. SolveMeFirst\n2. SimpleArraySum\n3. CompareTriplets\n")
+	fmt.Println("4. VeryBigSum")
+	fmt.Print("Enter practice number: ")
 	fmt.Scanf("%v", &practiceNo)
 
 	switch practiceNo {
@@ -17,6 +19,8 @@ func main() {
 		prepareHackerRank2()
 	case 3:
 		prepareHackerRank3()
+	case 4:
+		prepareHackerRank4()
 	}
 
 }
@@ -47,6 +51,16 @@ func prepareHackerRank3() {
 	fmt.Scanf("%v", &bobInput)
 
 	result := practice.CompareTriplets(aliceInput, bobInput)
+
+	fmt.Printf("result is %v", result)
+}
+
+func prepareHackerRank4() {
+	var input string
+	fmt.Print("Enter the large numbers:")
+	fmt.Scanf("%v", &input)
+	var inputArr []int64 = practice.ConvertToInt64Array(input)
+	result := practice.VeryBigSum(inputArr)
 
 	fmt.Printf("result is %v", result)
 }

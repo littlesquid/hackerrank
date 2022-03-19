@@ -1,4 +1,17 @@
 mode: set
+hackerrank/practice/testutils.go:7.74,8.24 1 1
+hackerrank/practice/testutils.go:8.24,10.3 1 0
+hackerrank/practice/utils.go:9.49,12.36 3 1
+hackerrank/practice/utils.go:20.2,20.17 1 1
+hackerrank/practice/utils.go:12.36,14.17 2 1
+hackerrank/practice/utils.go:18.3,18.32 1 1
+hackerrank/practice/utils.go:14.17,16.4 1 1
+hackerrank/practice/utils.go:23.51,26.36 3 0
+hackerrank/practice/utils.go:34.2,34.17 1 0
+hackerrank/practice/utils.go:26.36,28.17 2 0
+hackerrank/practice/utils.go:32.3,32.32 1 0
+hackerrank/practice/utils.go:28.17,30.4 1 0
+hackerrank/practice/hackerrank_1.go:3.46,5.2 1 1
 hackerrank/practice/hackerrank_2.go:7.40,9.28 2 1
 hackerrank/practice/hackerrank_2.go:12.2,12.15 1 1
 hackerrank/practice/hackerrank_2.go:9.28,11.3 1 1
@@ -11,11 +24,6 @@ hackerrank/practice/hackerrank_3.go:14.17,16.3 1 1
 hackerrank/practice/hackerrank_3.go:18.17,20.3 1 1
 hackerrank/practice/hackerrank_3.go:20.8,20.24 1 1
 hackerrank/practice/hackerrank_3.go:20.24,22.3 1 1
-hackerrank/practice/testutils.go:7.74,8.24 1 1
-hackerrank/practice/testutils.go:8.24,10.3 1 0
-hackerrank/practice/utils.go:9.49,12.36 3 1
-hackerrank/practice/utils.go:20.2,20.17 1 1
-hackerrank/practice/utils.go:12.36,14.17 2 1
-hackerrank/practice/utils.go:18.3,18.32 1 1
-hackerrank/practice/utils.go:14.17,16.4 1 1
-hackerrank/practice/hackerrank_1.go:3.46,5.2 1 1
+hackerrank/practice/hackerrank_4.go:3.36,5.24 2 1
+hackerrank/practice/hackerrank_4.go:8.2,8.12 1 1
+hackerrank/practice/hackerrank_4.go:5.24,7.3 1 1
