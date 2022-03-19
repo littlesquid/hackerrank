@@ -20,6 +20,14 @@ func ConvertToIntArray(arrInput string) []int32 {
 	return inputArr
 }
 
+func ConvertStringToNumber(input string) int32 {
+	intValue, err := strconv.ParseInt(input, 10, 32)
+	if err != nil {
+		fmt.Printf("convert number failed for %v : %v\n", input, err)
+	}
+	return int32(intValue)
+}
+
 func ConvertToInt64Array(arrInput string) []int64 {
 	inputArrStr := strings.Split(arrInput, ",")
 	inputArr := make([]int64, len(inputArrStr))

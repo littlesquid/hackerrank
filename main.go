@@ -3,12 +3,22 @@ package main
 import (
 	"fmt"
 	"hackerrank/practice"
+	"log"
+	"strings"
 )
 
 func main() {
 	var practiceNo int8
-	fmt.Print("1. SolveMeFirst\n2. SimpleArraySum\n3. CompareTriplets\n")
-	fmt.Println("4. VeryBigSum")
+	titles := []string{
+		"1. SolveMeFirst",
+		"2. SimpleArraySum",
+		"3. CompareTriplets",
+		"4. VeryBigSum",
+		"5. DiagonalDifference",
+	}
+	for _, title := range titles {
+		fmt.Println(title)
+	}
 	fmt.Print("Enter practice number: ")
 	fmt.Scanf("%v", &practiceNo)
 
@@ -21,6 +31,8 @@ func main() {
 		prepareHackerRank3()
 	case 4:
 		prepareHackerRank4()
+	case 5:
+		prepareHackerRank5()
 	}
 
 }
@@ -63,4 +75,31 @@ func prepareHackerRank4() {
 	result := practice.VeryBigSum(inputArr)
 
 	fmt.Printf("result is %v", result)
+}
+
+func prepareHackerRank5() {
+	var size int
+	fmt.Print("Enter the matrix size (odd number): ")
+	fmt.Scanf("%v", &size)
+
+	if size%2 != 0 {
+		log.Fatal("metrix size should be odd number")
+	}
+
+	r := 0
+	var userInput string
+	inputs := [][]int32{}
+	for r < size {
+		fmt.Printf("Enter the set or number for row%v: ", r)
+		fmt.Scanf("%v", &userInput)
+		c := 0
+		inputArr := strings.Split(userInput, ",")
+		for c < len(inputArr) {
+			inputs[r][c] = practice.ConvertStringToNumber(inputArr[c])
+			c++
+		}
+		r++
+	}
+
+	practice.DiagonalDifference(inputs, size)
 }
