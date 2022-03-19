@@ -1,8 +1,9 @@
-package hackerrank
+package practice
 
-func CompareTriplets(a []int32, b []int32) []int32 {
+func CompareTriplets(a string, b string) []int32 {
 	var result []int32 = make([]int32, 2)
-	calculatePoint(a, b, 0, result)
+
+	calculatePoint(convertToIntArray(a), convertToIntArray(b), 0, result)
 
 	return result
 }

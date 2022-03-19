@@ -1,10 +1,10 @@
-package hackerrank
+package practice
 
 import "testing"
 
 func TestCompareTriplets_draw(t *testing.T) {
-	aliceRate := []int32{1, 2, 3}
-	bobRate := []int32{3, 2, 1}
+	aliceRate := "1,2,3"
+	bobRate := "3,2,1"
 
 	expected := []int32{1, 1}
 
@@ -15,8 +15,8 @@ func TestCompareTriplets_draw(t *testing.T) {
 }
 
 func TestCompareTriplets_aliceWin(t *testing.T) {
-	aliceRate := []int32{17, 28, 30}
-	bobRate := []int32{99, 16, 8}
+	aliceRate := "17,28,30"
+	bobRate := "99,16,8"
 
 	expected := []int32{2, 1}
 
