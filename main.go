@@ -101,5 +101,6 @@ func prepareHackerRank5() {
 		r++
 	}
 
-	practice.DiagonalDifference(inputs, size)
+	result := practice.DiagonalDifference(inputs, size)
+	fmt.Printf("result is %v", result)
 }

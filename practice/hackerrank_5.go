@@ -34,7 +34,8 @@ func SecondaryDiagonal(inputs [][]int32, size int) int32 {
 	return sum
 }
 
-func DiagonalDifference(inputs [][]int32, size int) int32 {
+func DiagonalDifference(inputs [][]int32) int32 {
+	size := len(inputs)
 	primary := float64(PrimaryDiagonal(inputs, size))
 	secondary := float64(SecondaryDiagonal(inputs, size))
 	return int32(math.Abs(primary - secondary))
