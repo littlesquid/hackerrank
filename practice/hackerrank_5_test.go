@@ -15,7 +15,10 @@ func TestDiagonalDifference3x3(t *testing.T) {
 
 	actualResult := DiagonalDifference(input)
 
+	actualResultRecursion := DiagonalDifferenceRecursion(input)
+
 	AssertEqual(expected, actualResult, t)
+	AssertEqual(expected, actualResultRecursion, t)
 }
 
 func TestDiagonalDifference4x4(t *testing.T) {
@@ -30,7 +33,10 @@ func TestDiagonalDifference4x4(t *testing.T) {
 
 	actualResult := DiagonalDifference(input)
 
+	actualResultRecursion := DiagonalDifferenceRecursion(input)
+
 	AssertEqual(expected, actualResult, t)
+	AssertEqual(expected, actualResultRecursion, t)
 }
 
 func TestDiagonalDifference4x4_1(t *testing.T) {
@@ -45,7 +51,10 @@ func TestDiagonalDifference4x4_1(t *testing.T) {
 
 	actualResult := DiagonalDifference(input)
 
+	actualResultRecursion := DiagonalDifferenceRecursion(input)
+
 	AssertEqual(expected, actualResult, t)
+	AssertEqual(expected, actualResultRecursion, t)
 }
 
 func TestDiagonalDifference9x9(t *testing.T) {
@@ -65,5 +74,8 @@ func TestDiagonalDifference9x9(t *testing.T) {
 
 	actualResult := DiagonalDifference(input)
 
+	actualResultRecursion := DiagonalDifferenceRecursion(input)
+
 	AssertEqual(expected, actualResult, t)
+	AssertEqual(expected, actualResultRecursion, t)
 }
