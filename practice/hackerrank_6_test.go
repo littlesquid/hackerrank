@@ -1,6 +1,10 @@
 package practice
 
-import "testing"
+import (
+	"encoding/json"
+	"fmt"
+	"testing"
+)
 
 func TestPlusMinus_case1(t *testing.T) {
 	input := []int32{1, 1, 0, -1, -1}
@@ -34,4 +38,27 @@ func TestPlusMinus_case2(t *testing.T) {
 	AssertEqual(positiveRatioExpect, positiveRatio, t)
 	AssertEqual(negativeRatioExpect, negativeRatio, t)
 	AssertEqual(zeroRatioExpect, zeroRatio, t)
+}
+
+func FuzzPlusMinus(f *testing.F) {
+	testcases := [][]int32{
+		{-4, 3, -9, 0, 4, 1},
+		{1, 1, 0, -1, -1},
+		{-9, -1, 0, 12, 8, 1, 0},
+	}
+
+	for _, testcase := range testcases {
+		data, _ := json.Marshal(testcase)
+		f.Add(data)
+	}
+
+	f.Fuzz(func(t *testing.T, a []byte) {
+		var input []int32
+
+		err := json.Unmarshal(a, &input)
+		if err != nil {
+			fmt.Println("parse input failed")
+		}
+		PlusMinus(input)
+	})
 }

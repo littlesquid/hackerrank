@@ -19,10 +19,8 @@ func PlusMinus(arr []int32) []string {
 func checkRatio(arr []int32, index int, ratioResult [3]float32) [3]float32 {
 
 	if index == len(arr) {
-		fmt.Printf("ratioResult: %v\n", ratioResult)
 		return ratioResult
 	}
-	fmt.Println(arr[index])
 
 	if arr[index] > 0 {
 		ratioResult[0] += 1
@@ -33,5 +31,4 @@ func checkRatio(arr []int32, index int, ratioResult [3]float32) [3]float32 {
 	}
 
 	return checkRatio(arr, index+1, ratioResult)
-
 }

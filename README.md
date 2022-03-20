@@ -5,3 +5,4 @@ go command
 - go clean -testcache
 - go tool cover -html=cover.out : view coverage result in html
 - go mod init : initialize new module in current directory
+- go test --fuzz=test_case_name -fuzztime=10s ./practice
