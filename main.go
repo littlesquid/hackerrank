@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"hackerrank/practice"
-	"log"
 	"strings"
 )
 
@@ -15,6 +14,8 @@ func main() {
 		"3. CompareTriplets",
 		"4. VeryBigSum",
 		"5. DiagonalDifference",
+		"6. Ratio",
+		"7. Staircase",
 	}
 	for _, title := range titles {
 		fmt.Println(title)
@@ -33,6 +34,10 @@ func main() {
 		prepareHackerRank4()
 	case 5:
 		prepareHackerRank5()
+	case 6:
+		prepareHackerRank6()
+	case 7:
+		prepareHackerRank7()
 	}
 
 }
@@ -79,12 +84,8 @@ func prepareHackerRank4() {
 
 func prepareHackerRank5() {
 	var size int
-	fmt.Print("Enter the matrix size (odd number): ")
+	fmt.Print("Enter the matrix size: ")
 	fmt.Scanf("%v", &size)
-
-	if size%2 != 0 {
-		log.Fatal("metrix size should be odd number")
-	}
 
 	r := 0
 	var userInput string
@@ -103,4 +104,25 @@ func prepareHackerRank5() {
 
 	result := practice.DiagonalDifference(inputs)
 	fmt.Printf("result is %v", result)
+}
+
+func prepareHackerRank6() {
+	var userInput string
+	fmt.Printf("Enter the set or number for row: ")
+	fmt.Scanf("%v", &userInput)
+
+	input := practice.ConvertToIntArray(userInput)
+
+	result := practice.PlusMinus(input)
+	fmt.Printf("positive ratio: %v\n", result[0])
+	fmt.Printf("negative ratio: %v\n", result[1])
+	fmt.Printf("zero ratio: %v", result[2])
+}
+
+func prepareHackerRank7() {
+	var r int32
+	fmt.Printf("Enter the set or number of staircase size: ")
+	fmt.Scanf("%v", &r)
+
+	practice.Staircase(r)
 }
